@@ -76,22 +76,22 @@ An embedded C project for the LPC2129 ARM7 microcontroller that automates water 
 
 smart_tank_project
 
-main (4).c          - Main loop: sensor reads, auto/manual logic, RTC, EEPROM, UART output
-header (1).h        - All extern function declarations and typedefs
-├── adc_driver.c        - ADC init and single-channel read (10-bit result)
-├── waterlevel.c        - Water sensor: ADC CH0, scales to 0-100% using (adc*100)/1023
-├── temperature.c       - LM35: ADC CH2, formula (3.3/1024)*adc*100 gives degrees C
-├── ultrasonic.c        - HC-SR04: TRIG on P0.10, ECHO on P0.11, returns cm (count/58)
-├── servo_motor.c       - PWM2 servo: 0 deg=1000us, 90 deg=1500us, 180 deg=2000us, period=20ms
-├── lcd_4bit_driver.c   - 4-bit LCD driver (cmd, data, string, integer, float)
-├── uart_driver.c       - UART0: init, tx byte/string/int/float, rx byte/string
-├── i2c.c               - I2C master: init (100 kHz), write and read with error reporting
-├── eeprom1.c           - Reads stored water level (0x07) and temperature (0x09) from AT24C
-├── eint0 (1).c         - EINT0 ISR: falling-edge interrupt, 50ms debounce, toggles auto/manual flag
-├── delay.c             - Timer0-based delays: delay_ms, delay_sec, ultra_delay (microseconds)
-├── wifi (2).c          - ESP8266 AT-command driver, uploads wl+temp to ThingSpeak via HTTP GET
-├── can_rx.c            - CAN1 receive driver 
-└── can_tx.c            - CAN1 transmit driver 
+1.main (4).c          - Main loop: sensor reads, auto/manual logic, RTC, EEPROM, UART output
+2.header (1).h        - All extern function declarations and typedefs
+3. adc_driver.c        - ADC init and single-channel read (10-bit result)
+4. waterlevel.c        - Water sensor: ADC CH0, scales to 0-100% using (adc*100)/1023
+5.temperature.c       - LM35: ADC CH2, formula (3.3/1024)*adc*100 gives degrees C
+6.ultrasonic.c        - HC-SR04: TRIG on P0.10, ECHO on P0.11, returns cm (count/58)
+7. servo_motor.c       - PWM2 servo: 0 deg=1000us, 90 deg=1500us, 180 deg=2000us, period=20ms
+8. lcd_4bit_driver.c   - 4-bit LCD driver (cmd, data, string, integer, float)
+9. uart_driver.c       - UART0: init, tx byte/string/int/float, rx byte/string
+10. i2c.c               - I2C master: init (100 kHz), write and read with error reporting
+11. eeprom1.c           - Reads stored water level (0x07) and temperature (0x09) from AT24C
+12. eint0 (1).c         - EINT0 ISR: falling-edge interrupt, 50ms debounce, toggles auto/manual flag
+13. delay.c             - Timer0-based delays: delay_ms, delay_sec, ultra_delay (microseconds)
+14. wifi (2).c          - ESP8266 AT-command driver, uploads wl+temp to ThingSpeak via HTTP GET
+15. can_rx.c            - CAN1 receive driver 
+16. can_tx.c            - CAN1 transmit driver 
 
 
 ## I2C Device Addresses
