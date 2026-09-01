@@ -75,8 +75,8 @@ An embedded C project for the LPC2129 ARM7 microcontroller that automates water 
 ## File Structure
 
 smart_tank_project/
-├── main (4).c          - Main loop: sensor reads, auto/manual logic, RTC, EEPROM, UART output
-├── header (1).h        - All extern function declarations and typedefs
+main (4).c          - Main loop: sensor reads, auto/manual logic, RTC, EEPROM, UART output
+header (1).h        - All extern function declarations and typedefs
 ├── adc_driver.c        - ADC init and single-channel read (10-bit result)
 ├── waterlevel.c        - Water sensor: ADC CH0, scales to 0-100% using (adc*100)/1023
 ├── temperature.c       - LM35: ADC CH2, formula (3.3/1024)*adc*100 gives degrees C
